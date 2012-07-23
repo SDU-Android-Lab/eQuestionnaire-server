@@ -38,15 +38,20 @@ public class MainSeverHandler extends IoHandlerAdapter{
 			throws Exception {
 		// TODO Auto-generated method stub
 		super.messageReceived(session, message);
-		User user=(User)message;
-		//判断类型，是注册还是登录
-		if(user.getUserType()==UserType.login){
-			
-		}else{
-			if(user.getUserType()==UserType.regerister){
+		boolean b= message instanceof User;
+		if(b){
+			User user=(User)message;
+			if(user.getUserType()==UserType.login){
 				
+			}else{
+				if(user.getUserType()==UserType.regerister){
+					 RegesiterHandler handler=new RegesiterHandler();
+					 handler.returnRe(user);
+				}
 			}
 		}
+		//判断类型，是注册还是登录
+		
 		
 	}
 	@Override
