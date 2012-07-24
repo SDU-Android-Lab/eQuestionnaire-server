@@ -15,7 +15,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		User user =new User(0, "zhenz", "dfadf", "dfsdfadf", "fdfdfad", "fadfed", "dfadf", "fasdg", 133);
+		User user =new User( "zhenz", "dfadf", "dfsdfadf", "fdfdfad", "fadfed", "dfadf", "fasdg", 133);
 		SqlHelper h = new SqlHelper();
 		user.save(h, new SqlCallback() {
 			

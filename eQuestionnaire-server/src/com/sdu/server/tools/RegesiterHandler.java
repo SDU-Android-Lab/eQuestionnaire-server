@@ -7,10 +7,16 @@ import sdu.androidlab.isurvey.Database.SqlError;
 import sdu.androidlab.isurvey.Database.SqlHelper;
 
 import com.sdu.server.common.User;
+import com.sdu.server.common.employee;
 
 public class RegesiterHandler{
-	public boolean returnRe(User user){
-		sdu.androidlab.isurvey.Data.User user2=new  sdu.androidlab.isurvey.Data.User(user.getId(),user.getName(),user.getPassword(),user.getEmail(),user.getProvince(),user.getCity(),user.getStreet(),user.getPhone(),user.getPoint());
+	public boolean returnRe(Object obj){
+		
+		
+		if(obj instanceof User){
+			User user=(User)obj;
+		
+		sdu.androidlab.isurvey.Data.User user2=new  sdu.androidlab.isurvey.Data.User(user.getName(),user.getPassword(),user.getEmail(),user.getProvince(),user.getCity(),user.getStreet(),user.getPhone(),user.getPoint());
 		       user2.save(new SqlHelper(), new SqlCallback() {
 				
 				@Override
@@ -49,10 +55,19 @@ public class RegesiterHandler{
 					
 				}
 			});
-		return true;
 		
 		
 		
-	}
+		
+	}  
+		else{
+			if(obj instanceof employee){
+				
+			}
+			
+			
+			
+		}
+		return true;}
 
 }

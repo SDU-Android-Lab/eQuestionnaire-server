@@ -6,6 +6,7 @@ import org.apache.mina.core.session.IoSession;
 
 import com.sdu.server.common.User;
 import com.sdu.server.common.UserType;
+import com.sdu.server.common.employee;
 
 public class MainSeverHandler extends IoHandlerAdapter{
 	public MainSeverHandler() {
@@ -49,6 +50,14 @@ public class MainSeverHandler extends IoHandlerAdapter{
 					 handler.returnRe(user);
 				}
 			}
+			
+				
+			
+		}else{
+			if(message instanceof employee){
+				
+			}
+			
 		}
 		//判断类型，是注册还是登录
 		
