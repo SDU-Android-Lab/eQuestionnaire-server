@@ -1,7 +1,10 @@
 package com.sdu.server;
 
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.List;
 
+import sdu.androidlab.isurvey.Data.Data;
 import sdu.androidlab.isurvey.Data.User;
 import sdu.androidlab.isurvey.Database.SqlCallback;
 import sdu.androidlab.isurvey.Database.SqlError;
@@ -31,7 +34,7 @@ public class Main {
 				
 			}
 			
-			@Override
+		
 			public void onQueryComplete() {
 				// TODO Auto-generated method stub
 				
@@ -51,6 +54,19 @@ public class Main {
 			
 			@Override
 			public void onDeleteComplete() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onQueryComplete(List<Data> dataList) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onQueryMultiTableComplete(
+					List<HashMap<String, Object>> dataList) {
 				// TODO Auto-generated method stub
 				
 			}

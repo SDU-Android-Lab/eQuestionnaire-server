@@ -7,7 +7,7 @@ public class Person {
 	/*
 	 * 定义 id，password，以及注册的类型
 	 */
-	private int id;
+	private Integer id;
 	private String name;
 	private String email;
 	private String phone;
