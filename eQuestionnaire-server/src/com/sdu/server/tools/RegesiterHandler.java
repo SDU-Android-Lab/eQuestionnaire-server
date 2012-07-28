@@ -28,8 +28,8 @@ public class RegesiterHandler extends Thread{
 		if(obj instanceof User){
 			User user=(User)obj;
 		
-		sdu.androidlab.isurvey.Data.User user2=new  sdu.androidlab.isurvey.Data.User(user.getName(),user.getPassword(),user.getEmail(),user.getProvince(),user.getCity(),user.getStreet(),user.getPhone(),user.getPoint());
-		       work=user2.save(new SqlHelper());
+		//sdu.androidlab.isurvey.Data.User user2=new  sdu.androidlab.isurvey.Data.User(user.getName(),user.getPassword(),user.getEmail(),user.getProvince(),user.getCity(),user.getStreet(),user.getPhone(),user.getPoint());
+		     //  work=user2.save(new SqlHelper());
 		
 		
 		

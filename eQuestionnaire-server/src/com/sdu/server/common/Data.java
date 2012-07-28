@@ -1,5 +1,7 @@
 package com.sdu.server.common;
 
-public class Data {
+import java.io.Serializable;
+
+public class Data implements Serializable {
 
 }

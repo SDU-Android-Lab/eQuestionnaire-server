@@ -1,6 +1,8 @@
 package com.sdu.server.common;
 
-public class User extends Person{
+import java.io.Serializable;
+
+public class User extends Person implements Serializable{
 	public User(){
 		super();
 	}

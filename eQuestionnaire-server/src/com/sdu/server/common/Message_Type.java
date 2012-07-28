@@ -9,6 +9,9 @@ public interface Message_Type {
 	 * 3表示获取调查问卷列表，对应的是data数据的list
 	 * 4表示分析结果
 	 * 5表示获得个人信息，对应的是user
+	 * 6表示获得公司信息
+	 * 7表示获取调查问卷
+	 * 8表示获得调查问卷的问题
 	 */
 	public static final int  LoginIn=0;
 	public static final int  Regesiter=1;
@@ -16,6 +19,9 @@ public interface Message_Type {
 	public static final int getdata=3;
 	public static final int getAnnaltics=4;
 	public static final int Information=5;
+	public static final int Getclient=6;
+	public static final int getQue=7;
+	public static final int getPro=8;
 	
 
 }

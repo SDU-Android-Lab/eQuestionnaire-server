@@ -1,6 +1,8 @@
 package com.sdu.server.common;
 
-public class employee extends Person{
+import java.io.Serializable;
+
+public class employee extends Person implements Serializable{
 	private String work;
 	private Double salary;
 	private  Integer administor_aid;

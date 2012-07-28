@@ -1,8 +1,10 @@
 package com.sdu.server.common;
 
+import java.io.Serializable;
+
 import sdu.androidlab.isurvey.Database.annotation.Column;
 
-public class Administor extends Person {
+public class Administor extends Person implements Serializable{
 	public String adepartment;// 管理员部门
 	public String apost;// 管理员职位
 	public Double salary;

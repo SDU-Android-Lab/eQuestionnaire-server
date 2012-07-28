@@ -1,13 +1,15 @@
 package com.sdu.server.common;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
 	/*
 	 * @author sdusjy
 	 */
 	/*
 	 * 定义 id，password，以及注册的类型
 	 */
-	private Integer id;
+	private int id;
 	private String name;
 	private String email;
 	private String phone;
@@ -86,6 +88,8 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+   // public String toString(){
+    //	return 
+    //}	
 
 }

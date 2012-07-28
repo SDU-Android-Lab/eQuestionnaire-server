@@ -18,59 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		User user =new User( "zhenz", "dfadf", "dfsdfadf", "fdfdfad", "fadfed", "dfadf", "fasdg", 133);
-		SqlHelper h = new SqlHelper();
-		user.save(h, new SqlCallback() {
-			
-			@Override
-			public void onUpdataComplete() {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onSqlExecuteComplete(ResultSet resultSet) {
-				// TODO Auto-generated method stub
-				
-			}
-			
 		
-			public void onQueryComplete() {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onInsertComplete() {
-				// TODO Auto-generated method stub
-				System.out.print("success");
-			}
-			
-			@Override
-			public void onError(SqlError error) {
-				// TODO Auto-generated method stub
-				error.exception.printStackTrace();
-			}
-			
-			@Override
-			public void onDeleteComplete() {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void onQueryComplete(List<Data> dataList) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void onQueryMultiTableComplete(
-					List<HashMap<String, Object>> dataList) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
 	}
 
 }

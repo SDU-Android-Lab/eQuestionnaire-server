@@ -40,52 +40,64 @@ public class MainSeverHandler extends IoHandlerAdapter{
 			throws Exception {
 		// TODO Auto-generated method stub
 		super.messageReceived(session, message);
-		boolean b=message instanceof Messages;
-		  if(b){
-			  switch(((Messages)message).getMessage_type()){
-			  case 0:
-				  /*
-				   * µÇÂ¼
-				   */
-				  Object user_login=(((Messages)message).getObj());
-				  LoginHandler lh=new LoginHandler(user_login);
-				  lh.start();
-				  boolean b1=lh.returnlogin();
-				  if(b1){
-					  Messages loginMeesge1=new Messages(2, 1);
-					  session.write(loginMeesge1);
-					  
-				  }
-				  else{
-					 Messages loginMeesge2=new Messages(2, 0);
-					  session.write(loginMeesge2); 
-				  }
-				  break;
-			  case 1:
-				  /*
-				   * ×¢²á
-				   */
-	            Object user_rege=(((Messages)message).getObj());
-			    RegesiterHandler regesiterHandler=new RegesiterHandler(user_rege);
-			    regesiterHandler.start();
-			    if(regesiterHandler.returnRe()){
-			    	Messages loginMeesge1=new Messages(2, 2);
-					  session.write(loginMeesge1);
-			    }else{
-			    	 Messages loginMeesge2=new Messages(2, 3);
-					  session.write(loginMeesge2);
-			    }
-			    break;
-				  
-			  case 3:
-				  
-			  case 4:
-			  case 5:
-				  //User user_information=(User)(((Messages)message).getObj());
-				 // Messages messages=new Messages(5,user_information);
+		  Messages messages=(Messages)message;
+		  switch(messages.getMessage_type()){
+		  case  0:
+			  LoginHandler login =new LoginHandler(messages.getObj());
+			  login.start();
+			  boolean b=login.returnlogin();
 			  
+			  if(b){
+				  Messages messages2=new Messages(0, 1);
+				  session.write(messages2);}
+			  else{
+				  Messages messages2=new Messages(0, 2);
+				  session.write(messages2);
+			  }
 			  
+			  break;
+		  case 1:
 			  
+			  break;
+		  case 2:
+			  break;
+		  case 3:
+			  break;
+		  case 4:
+			  break;
+		  case 5:
+			  LoginHandler login2 =new LoginHandler(messages.getObj());
+			  login2.start();
+			  Messages message3=new Messages(5, login2.getUser());
+			  session.write(message3);
+			  
+			  break;
+		  case 6:
+			  break;
+		  case 7:
+			  break;
+		  case 8:
+			  break;
+		  case 9:
+			  break;
+			  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  }
+		  
+		  
+		  
+		  
+		  
 			  
 			  }
 			  
@@ -96,13 +108,13 @@ public class MainSeverHandler extends IoHandlerAdapter{
 			  
 			  
 			  
-		  }
 		
 		
 		
 		
 		
-	}
+		
+	
 	@Override
 	public void messageSent(IoSession session, Object message) throws Exception {
 		// TODO Auto-generated method stub
